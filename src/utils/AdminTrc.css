@@ -1,0 +1,72 @@
+.table-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid gray
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  text-align: center
+  ;
+}
+
+td {
+  vertical-align: middle;
+}
+
+/* Status color styles */
+.status.success {
+  color: green;
+}
+
+.status.pending {
+  color: orange;
+}
+
+.status.cancel {
+  color: red;
+}
+
+.status.otw {
+  color: blue;
+}
+
+.status.waiting {
+  color: orange;
+}
+
+/* Action buttons */
+button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.approve-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+  background-color: #f1f1f1;
+}

@@ -3,7 +3,6 @@ import { Box, Button, Input, TextField } from "@mui/material";
 import Header3 from "./Header3";
 import Rwanda from "../assets/image/RwandaBeans.png";
 import Beans from "../assets/image/Frame.png";
-import { useNavigate } from "react-router-dom";
 import { RootState, useAppDispatch, useAppSelector } from "../stores/store";
 import { useState } from "react";
 import { transactionAddFetch } from "../stores/slices/transaction/transactionFetch";
@@ -167,7 +166,7 @@ const Shipping = () => {
         </div>
         <div>
           {dataCart?.length > 0 &&
-            dataCart?.map((item: any, index: number) => {
+            dataCart?.map((item: any) => {
               return (
                 <Box
                   sx={{

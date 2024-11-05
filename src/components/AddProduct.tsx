@@ -1,14 +1,12 @@
 import Header3 from "./Header3";
-import Rwanda from "../assets/image/RwandaBeans.png";
+import Rwanda from "../assets/image/GuetemalaBeans.png";
 import { Box, Button, Input, TextField, Typography } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "../stores/store";
 import { productAddFetch } from "../stores/slices/product/productFetch";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
   const dispatch = useAppDispatch();
-  const navigate = useNavigate();
   const { errorAdd, isLoadingAdd } = useAppSelector(
     (state) => state.productAddState
   );
@@ -38,7 +36,9 @@ const AddProduct = () => {
       photo: value.photo,
     };
     dispatch(productAddFetch(data));
-    window.location.replace("/");
+    setTimeout(() => {
+      window.location.replace("/");
+    }, 3000);
   };
 
   // useEffect(() => {

@@ -15,6 +15,7 @@ import {
 import userSlice from "./slices/users/userSlice";
 import userIdSlice from "./slices/users/userIdSlice";
 import registerSlice from "./slices/auth/registerSlice";
+import buySlice from "./slices/buy/buySlice";
 
 export const store = configureStore({
   reducer: {
@@ -24,6 +25,7 @@ export const store = configureStore({
     productDetailState: productDetailReducer,
     productAddState: productAddReducer,
     cartState: cartSlice,
+    buyState : buySlice,
     transactionState: transactionAllReducer,
     transactionAddState: transactionAddReducer,
     transactionUpdateState: transactionUpdateReducer,

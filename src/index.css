@@ -29,8 +29,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-image: url("./assets/image/beans.jpg");
-  background-size: cover;
-  background-position: inherit;
+  background-size: contain  ;
+  background-position: center;
 }
 
 h1 {

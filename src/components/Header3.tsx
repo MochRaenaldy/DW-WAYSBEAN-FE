@@ -4,17 +4,17 @@ import image from "./../assets/image/Icon.png";
 import { Button, IconButton, Menu, MenuItem } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { RootState, useAppSelector } from "../stores/store";
 import { AccountCircle } from "@mui/icons-material";
 import React from "react";
+import { RootState, useAppSelector } from "../stores/store";
 
 export default function ButtonAppBar() {
   const getToken = localStorage.getItem("token");
   const getProfile = localStorage.getItem("user");
   const dataProfile = getProfile ? JSON.parse(getProfile) : null;
   const navigate = useNavigate();
-  const {dataCart} = useAppSelector((state: RootState) => state.cartState);
    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+   const {dataCart} = useAppSelector((state : RootState) => state.cartState);
 
   const handleLoginClick = () => {
     navigate("/auth/Login");
@@ -58,9 +58,9 @@ const handlelogout  = () => {
                 <div>
                   <Button onClick={() => navigate("/Cart")}>
                     <ShoppingCartIcon style={{ color: "black" }} />{" "}
-                    {/* <Box sx={{ color: "red", marginTop: "-20px" }}>
+                    <Box sx={{ color: "red", marginTop: "-20px" }}>
                       {dataCart.length}
-                    </Box> */}
+                    </Box>
                   </Button>
                   <IconButton
                     size="large"

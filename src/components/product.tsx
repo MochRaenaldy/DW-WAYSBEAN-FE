@@ -1,9 +1,6 @@
 // import "./App.css";
 import { Link } from "react-router-dom";
 import Rwanda from "../assets/image/RwandaBeans.png";
-import Ethiopia from "../assets/image/EthiopiaBeans.png";
-import Guetemala from "../assets/image/GuetemalaBeans.png";
-import Nicarua from "../assets/image/NicaruaBeans.png";
 import { RootState, useAppDispatch, useAppSelector } from "../stores/store";
 import { useEffect } from "react";
 import { productAllFetch } from "../stores/slices/product/productFetch";
@@ -48,7 +45,7 @@ const Product = () => {
           display: "flex",
           flexWrap: "wrap",
           width: "990px",
-          height: "310px",
+          height: "410px",
         }}>
         {products.length > 0 &&
           products.map((item: any, index) => (
@@ -65,10 +62,10 @@ const Product = () => {
                 <div
                   style={{
                     width: "241px",
-                    alignItems: "flex-start",
+                    
                     backgroundColor: "#F6E6DA",
                     marginTop: "-22px",
-                    marginBottom: "100px",
+                    
                   }}>
                   <p style={{ fontWeight: "bold", color: "black" }}>
                     {item.name}

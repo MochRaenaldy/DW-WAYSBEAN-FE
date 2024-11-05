@@ -14,14 +14,14 @@ import Header3 from "./Header3";
 import { RootState, useAppDispatch, useAppSelector } from "../stores/store";
 import {
   deleteCart,
+  ICart,
   saveCart,
   updateCart,
 } from "../stores/slices/cart/cartSlice";
-import { useNavigate } from "react-router-dom";
 import Rwanda from "../assets/image/RwandaBeans.png";
+import { addBuy, saveBuy } from "../stores/slices/buy/buySlice";
 
 const Cart: React.FC = () => {
-  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const { dataCart } = useAppSelector((state: RootState) => state.cartState);
   const totalPrice =
@@ -46,6 +46,23 @@ const Cart: React.FC = () => {
     }
 
     dispatch(saveCart());
+  };
+
+  const handleAddBuy = () => {
+    {
+      const data: ICart = {
+        idProduct: dataCart?.id,
+        name: dataCart?.name,
+        price: dataCart?.price,
+        photo: dataCart?.photo,
+        quantity: dataCart.quantity,
+        totalPrice: dataCart?.price * 1,
+      };
+      dispatch(addBuy(data));
+      dispatch(saveBuy());
+      // localStorage.removeItem("dataCart");
+      // window.location.reload();
+    }
   };
 
   return (
@@ -130,7 +147,7 @@ const Cart: React.FC = () => {
       <Button
         variant="contained"
         color="primary"
-        onClick={() => navigate("/Transaction")}
+        onClick={() => handleAddBuy()}
         sx={{ marginTop: "1rem", backgroundColor: "#6A4928" }}>
         Proceed To Checkout
       </Button>

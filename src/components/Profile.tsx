@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from "react";
 import Header3 from "./Header3";
 import Profil from "../assets/image/profil.png";
 import { Box, Typography } from "@mui/material";
 import Rwanda from "../assets/image/RwandaBeans.png";
 import Beans from "../assets/image/Frame.png";
 import qr from "../assets/image/qr.png";
-import { useAppDispatch, useAppSelector } from "../stores/store";
-import { productAllFetch } from "../stores/slices/product/productFetch";
+import { useAppSelector } from "../stores/store";
 
 const Profile = () => {
-const dispatch = useAppDispatch();
 const { dataCart} = useAppSelector((state) => state.cartState);
 const { error,isLoading,} = useAppSelector((state) => state.userstate);
 

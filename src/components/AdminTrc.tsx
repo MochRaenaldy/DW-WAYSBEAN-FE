@@ -5,51 +5,6 @@
   import CheckCircleIcon from "@mui/icons-material/CheckCircle";
   import { RootState, useAppDispatch, useAppSelector } from "../stores/store";
   import { transactionAllFetch, transactionUpdate } from "../stores/slices/transaction/transactionFetch";
-  import { saveCart } from "../stores/slices/cart/cartSlice";
-
-  // interface Transaction {
-  //   id: number;
-  //   name: string;
-  //   address: string;
-  //   postCode: string;
-  //   productsOrder: string;
-  //   status: string;
-  // }
-
-  // const transactions: Transaction[] = [
-  //   {
-  //     id: 1,
-  //     name: "Sugeng No Pants",
-  //     address: "Cileungsi",
-  //     postCode: "16820",
-  //     productsOrder: "RWANDA Beans",
-  //     status: "Success",
-  //   },
-  //   {
-  //     id: 2,
-  //     name: "Haris Gams",
-  //     address: "Serang",
-  //     postCode: "42111",
-  //     productsOrder: "ETHIOPIA Beans",
-  //     status: "Success",
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Aziz Union",
-  //     address: "Bekasi",
-  //     postCode: "13450",
-  //     productsOrder: "GUETEMALA Beans",
-  //     status: "Pending",
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Lae Tanjung Balai",
-  //     address: "Tanjung Balai",
-  //     postCode: "21331",
-  //     productsOrder: "NICARAGUA Beans",
-  //     status: "Cancel",
-  //   },
-  // ];
 
   const IncomeTransactionTable: React.FC = () => {
     const dispatch = useAppDispatch();

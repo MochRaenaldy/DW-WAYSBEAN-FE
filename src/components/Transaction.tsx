@@ -5,13 +5,11 @@ import Rwanda from "../assets/image/RwandaBeans.png";
 import Beans from "../assets/image/Frame.png";
 import { useNavigate } from "react-router-dom";
 import { RootState, useAppDispatch, useAppSelector } from "../stores/store";
-import { ITransaction } from "../types/ITransaction";
 import { useState } from "react";
-import { transactionAddFetch, transactionUpdate } from "../stores/slices/transaction/transactionFetch";
+import { transactionAddFetch } from "../stores/slices/transaction/transactionFetch";
 
 const Shipping = () => {
   const dispatch = useAppDispatch();
-  const navigate = useNavigate();
   const { errorAdd, isLoadingAdd } = useAppSelector(
     (state: RootState) => state.transactionAddState
   );

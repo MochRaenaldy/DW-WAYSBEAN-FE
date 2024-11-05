@@ -1,5 +1,5 @@
 // import "./App.css";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Header3 from "../components/Header3";
 import Rwanda from "./../assets/image/RwandaBeans.png";
 import { useAppDispatch, useAppSelector } from "../stores/store";
@@ -9,7 +9,6 @@ import {
   addCart,
   ICart,
   saveCart,
-  updateCart,
 } from "../stores/slices/cart/cartSlice";
 
 const Detail = () => {
@@ -20,7 +19,6 @@ const Detail = () => {
   );
   const { dataCart } = useAppSelector((state) => state.cartState);
   const params = useParams();
-  const navigate = useNavigate();
 
   const fetchDetailProduct = async () => {
     try {

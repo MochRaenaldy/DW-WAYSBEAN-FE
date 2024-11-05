@@ -1,7 +1,6 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { RootState, useAppDispatch, useAppSelector } from "../stores/store";
-import { ILogin } from "../stores/slices/auth/loginSlice";
 import { useState } from "react";
 import { authRegister } from "../stores/slices/auth/registerSlice";
 
